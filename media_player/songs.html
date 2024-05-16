@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/songsplaylist.css">
+    <title>Songs</title>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="/media/logo.png" alt="" srcset="" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="./index.html">HOME</a></li>
+                    <li><a href="./songs.html">SONGS</a></li>
+                    <li><a href="./playlist.html">PLAYLIST</a></li>
+                    <li><a href="./about.html">ABOUT</a></li>
+                    <li><a href="./connect.html">CONNECT</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="content">
+            <h2>Choose any song</h2>
+            <br><br>
+            <div class="songs">
+                <div class="song-list left">
+                    <p>Pehla Pyaar : Kabir Singh</p>
+                    <img src="media/play.png" alt="" id="icon1">
+                    <p>O Mahi </p>
+                    <img src="media/play.png" alt="" id="icon2">
+                    <p>Ve Haniya</p>
+                    <img src="media/play.png" alt="" id="icon3">
+                </div>
+            </div>
+        </div>      
+    </div>
+    <audio id="pehlapyaar" >
+        <source src="media/pehlapyaar.mp3" type="audio/mp3">
+    </audio>
+    <audio id="omahi">
+        <source src="media/omahi.mp3" type="audio/mp3">
+    </audio>
+    <audio id="vehaniya">
+        <source src="media/vehaniya.mp3" type="audio/mp3">
+    </audio>
+    <script>
+        var pehlapyaar = document.getElementById("pehlapyaar");
+        var omahi = document.getElementById("omahi");
+        var vehaniya = document.getElementById("vehaniya");
+        var icon1 = document.getElementById("icon1");
+        var icon2 = document.getElementById("icon2");
+        var icon3 = document.getElementById("icon3");
+
+        icon1.onclick = function(){
+            if (pehlapyaar.paused){
+                pehlapyaar.play();
+                icon1.src = "media/pause.png";
+            } else {
+                pehlapyaar.pause();
+                icon1.src = "media/play.png";
+            }
+        }
+        icon2.onclick = function(){
+            if (omahi.paused){
+                omahi.play();
+                icon2.src = "media/pause.png";
+            } else {
+                omahi.pause();
+                icon2.src = "media/play.png";
+            }
+        }
+        icon3.onclick = function(){
+            if (vehaniya.paused){
+                vehaniya.play();
+                icon3.src = "media/pause.png";
+            } else {
+                vehaniya.pause();
+                icon3.src = "media/play.png";
+            }
+        }
+    </script>
+</body>
+</html>
